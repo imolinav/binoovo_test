@@ -13,6 +13,7 @@ export class FilmsComponent implements OnInit {
 
   constructor(private apiService: ApiService) { }
 
+  /* Connection via the apiService component's function getFilms() to the node server and data retrieval */
   ngOnInit() {
     this.apiService.getFilms().subscribe((data) => {
       console.log(data);

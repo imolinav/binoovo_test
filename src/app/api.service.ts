@@ -8,6 +8,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
+  /*Connections to the node server's endpoints*/
   public getFilms() {
     return this.httpClient.get('http://localhost:8000/api/films');
   }

@@ -14,6 +14,7 @@ export class FilmComponent implements OnInit {
 
   constructor(private apiService: ApiService, private route: ActivatedRoute) { }
 
+  /* Connection via the apiService component's function getFilm(id) to the node server and data retrieval */
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
 
