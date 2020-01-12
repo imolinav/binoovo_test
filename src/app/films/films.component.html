@@ -1,1 +1,13 @@
-<p *ngFor="let film of films['results']">{{ film.id }}</p>
+<div class="row">
+  <div *ngFor="let film of films['results']" class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card mt-4">
+      <a [routerLink]="['/film', film.id]"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ film.poster_path }}" class="card-img-top" alt=""></a>
+      <div class="card-body">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted font-weight-light">{{ film.release_date }}</h6>
+        <p class="card-text" style="max-height: 50px; min-height: 50px; overflow: hidden;">{{ film.overview }}</p>
+        <a [routerLink]="['/film', film.id]" class="card-link">Ver mas...</a>
+      </div>
+    </div>
+  </div>
+</div>
