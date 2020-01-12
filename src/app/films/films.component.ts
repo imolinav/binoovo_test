@@ -17,7 +17,6 @@ export class FilmsComponent implements OnInit {
     this.apiService.getFilms().subscribe((data) => {
       console.log(data);
       this.films = data;
-    })
+    });
   }
-
 }
